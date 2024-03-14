@@ -1,0 +1,79 @@
+body {
+  font-family: $ff-primary;
+  padding: 1rem;
+  background-color: $clr-cream;
+  display: grid;
+  place-items: center;
+}
+
+.chart {
+  display: grid;
+  gap: 1rem;
+  &__header {
+    background-color: $clr-soft-red;
+    display: flex;
+    justify-content: space-between;
+    & .chart__summary__title,
+    .chart__summary__value {
+      color: $clr-very-pale-orange;
+    }
+  }
+
+  &__summary {
+    &__title {
+      color: $clr-medium-brown;
+      font-weight: $fw-400;
+      font-size: 0.95rem;
+    }
+    &__value {
+      color: $clr-dark-brown;
+      font-weight: $fw-700;
+      &--xl {
+        font-size: 1.9rem;
+      }
+      &--large {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__bar-chart {
+    padding-block: 1.5rem;
+    &__bar {
+      &__value {
+        font-size: 0.75rem;
+      }
+      &__date {
+        font-size: 0.75rem;
+        color: $clr-medium-brown;
+      }
+    }
+  }
+
+  &__body {
+    background-color: $clr-very-pale-orange;
+    // &.container {
+    //   padding-block: 1.25rem;
+    // }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      border-block-start: 2px solid $clr-cream;
+      padding-block-start: 1rem;
+    }
+  }
+}
+
+.text-align--end {
+  text-align: end;
+  align-self: end;
+}
+
+.container {
+  border-radius: 10px;
+  padding: 1.25rem 1rem;
+}
+
+.logo {
+  width: 3.5rem;
+}

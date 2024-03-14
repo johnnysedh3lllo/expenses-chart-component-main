@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- GOOGLE FONTS API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="src/styles/style.css">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+</head>
+
+<body>
+  <article class="chart">
+
+    <!-- CHART HEADER -->
+    <header class="chart__header container">
+      <section class="chart__summary">
+        <h3 class="chart__summary__title chart__summary__title--small">
+          My balance
+        </h3>
+        <p class="chart__summary__value chart__summary__value--large">
+          $921.48
+        </p>
+      </section>
+
+      <img class="logo" src="src/assets/logo.svg" alt="">
+    </header>
+
+    <!-- CHART MAIN -->
+    <main class="chart__body container">
+
+      <h2 class="chart__body__heading">
+        Spending - Last 7 days
+      </h2>
+
+      <!-- BAR CHART -->
+      <div class="chart__bar-chart">
+        <div class="chart__bar-chart__bar">
+          <span class="chart__bar-chart__bar__value">$52.59</span>
+          <div class="chart__bar-chart__bar__rect"></div>
+          <p class="chart__bar-chart__bar__date">mon</p>
+        </div>
+
+      </div>
+
+      <!-- CHART FOOTER -->
+      <section class="chart__body__footer">
+        <div class="chart__summary">
+          <h3 class="chart__summary__title">
+
+            Total this month
+          </h3>
+          <p class="chart__summary__value chart__summary__value--xl">
+            $478.33
+          </p>
+        </div>
+
+        <div class="chart__summary text-align--end">
+          <span class="chart__summary__value">
+            +2.4%
+          </span>
+          <p class="chart__summary__title">
+            from last month
+          </p>
+        </div>
+      </section>
+    </main>
+  </article>
+
+
+  <!--   
+  mon
+  tue
+  wed
+  thu
+  fri
+  sat
+  sun -->
+
+
+  <script type="module" src="src/script.js"></script>
+</body>
+
+</html>
