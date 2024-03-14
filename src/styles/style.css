@@ -111,11 +111,10 @@ body {
 .chart__bar-chart {
   padding-block: 1.5rem;
 }
-.chart__bar-chart__bar__value {
+.chart__bar-chart__bar {
   font-size: 0.75rem;
 }
 .chart__bar-chart__bar__date {
-  font-size: 0.75rem;
   color: hsl(28, 10%, 53%);
 }
 .chart__body {

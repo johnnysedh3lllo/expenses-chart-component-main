@@ -40,11 +40,11 @@ body {
   &__bar-chart {
     padding-block: 1.5rem;
     &__bar {
-      &__value {
-        font-size: 0.75rem;
-      }
+      font-size: 0.75rem;
+      // &__value {
+      //     font-size: 0.75rem;
+      // }
       &__date {
-        font-size: 0.75rem;
         color: $clr-medium-brown;
       }
     }
