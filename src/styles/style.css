@@ -149,6 +149,7 @@ a {
   opacity: 0;
   z-index: -2;
   transition: opacity 0.125s;
+  font-weight: 700;
 }
 .chart__bar-chart__bar:hover .chart__bar-chart__bar__value {
   display: initial;
