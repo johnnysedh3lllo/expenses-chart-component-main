@@ -97,7 +97,6 @@ a {
 .chart {
   display: grid;
   gap: 1rem;
-  inline-size: min(100%, 425px);
 }
 .chart__header {
   background-color: hsl(10, 79%, 65%);
