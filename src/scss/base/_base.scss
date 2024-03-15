@@ -65,6 +65,7 @@
       text-align: center;
       justify-items: center;
       position: relative;
+      align-self: end;
       &__value {
         background-color: $clr-dark-brown;
         color: $clr-very-pale-orange;
@@ -86,9 +87,11 @@
       &__rect {
         inline-size: clamp(2rem, 1.63rem + 1.56vw, 3rem);
         background-color: $clr-soft-red;
-        block-size: 50%;
         height: 100px;
         border-radius: 5px;
+        &:hover {
+          filter: brightness(1.2);
+        }
       }
       &__date {
         color: $clr-medium-brown;
@@ -108,6 +111,10 @@
       padding-block-start: 1rem;
     }
   }
+}
+
+.cyan {
+  background-color: $clr-cyan;
 }
 
 @media (min-width: 769px) {
@@ -134,11 +141,6 @@
       gap: 1.25rem;
       &__bar {
         gap: 0.25rem;
-        &__rect {
-          inline-size: clamp(2rem, 1.63rem + 1.56vw, 3rem);
-          height: 100px;
-          border-radius: 5px;
-        }
       }
     }
   }
