@@ -23,7 +23,7 @@ for (const data of JSONData) {
 
   // calculating height for bars based on the total amount
   const portionInPercentage = (data.amount / totalAmount) * 100;
-  const heightValue = (portionInPercentage * 0.16).toFixed(2) * 2;
+  const heightValue = (portionInPercentage * 0.16).toFixed(2) * 2.5;
 
   // display bars and adding color class to current day
   if (dayIndex === currentDay) {
