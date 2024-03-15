@@ -1,4 +1,4 @@
-body {
+.body {
   font-family: $ff-primary;
   padding: 1rem;
   background-color: $clr-cream;
@@ -6,9 +6,24 @@ body {
   place-items: center;
 }
 
+.logo {
+  inline-size: 3.75rem;
+}
+
+.container {
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.text-align--end {
+  text-align: end;
+  align-self: end;
+}
+
 .chart {
   display: grid;
   gap: 1rem;
+  inline-size: min(100%, 425px);
   &__header {
     background-color: $clr-soft-red;
     display: flex;
@@ -23,27 +38,58 @@ body {
     &__title {
       color: $clr-medium-brown;
       font-weight: $fw-400;
-      font-size: 0.95rem;
+      font-size: clamp(0.95rem, 0.84rem + 0.47vw, $fs-primary);
     }
     &__value {
+      font-size: clamp(0.95rem, 0.84rem + 0.47vw, $fs-primary);
       color: $clr-dark-brown;
       font-weight: $fw-700;
-      &--xl {
-        font-size: 1.9rem;
-      }
       &--large {
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 1.32rem + 0.78vw, 2rem);
+      }
+      &--xl {
+        font-size: clamp(1.9rem, 1.53rem + 1.57vw, 2.9rem);
       }
     }
   }
 
   &__bar-chart {
-    padding-block: 1.5rem;
+    padding-block: 4rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
     &__bar {
-      font-size: 0.75rem;
-      // &__value {
-      //     font-size: 0.75rem;
-      // }
+      font-size: clamp(0.75rem, 0.57rem + 0.78vw, 1.25rem);
+      display: grid;
+      gap: 0.25rem;
+      text-align: center;
+      justify-items: center;
+      position: relative;
+      &__value {
+        background-color: $clr-dark-brown;
+        color: $clr-very-pale-orange;
+        padding: 0.4rem 0.5rem;
+        border-radius: 6px;
+        position: absolute;
+        inset-block-start: -47px;
+        opacity: 0;
+        z-index: -2;
+        transition: opacity 0.125s;
+      }
+
+      &:hover &__value {
+        display: initial;
+        opacity: 1;
+        z-index: 1;
+      }
+
+      &__rect {
+        inline-size: clamp(2rem, 1.63rem + 1.56vw, 3rem);
+        background-color: $clr-soft-red;
+        block-size: 50%;
+        height: 100px;
+        border-radius: 5px;
+      }
       &__date {
         color: $clr-medium-brown;
       }
@@ -52,9 +98,9 @@ body {
 
   &__body {
     background-color: $clr-very-pale-orange;
-    // &.container {
-    //   padding-block: 1.25rem;
-    // }
+    &__heading {
+      font-size: clamp(1rem, 0.63rem + 1.56vw, 2rem);
+    }
     &__footer {
       display: flex;
       justify-content: space-between;
@@ -64,16 +110,36 @@ body {
   }
 }
 
-.text-align--end {
-  text-align: end;
-  align-self: end;
-}
+@media (min-width: 769px) {
+  .container {
+    padding: 1.75rem 2.5rem;
+    &.chart__header {
+      padding: 1.75rem 2rem 1.25rem;
+    }
+  }
 
-.container {
-  border-radius: 10px;
-  padding: 1.25rem 1rem;
-}
+  .logo {
+    inline-size: 4.5rem;
+  }
 
-.logo {
-  width: 3.5rem;
+  .chart {
+    gap: 1.5rem;
+    &__body {
+      &__heading {
+        text-align: start;
+      }
+    }
+
+    &__bar-chart {
+      gap: 1.25rem;
+      &__bar {
+        gap: 0.25rem;
+        &__rect {
+          inline-size: clamp(2rem, 1.63rem + 1.56vw, 3rem);
+          height: 100px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
 }
